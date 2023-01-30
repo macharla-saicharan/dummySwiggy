@@ -29,6 +29,7 @@ export class MenuComponent implements OnInit {
 
   itemName!:any;
   presentItemName!:string;
+  presentItemDetails!:any;
   hotels:any[] = this.hotelsService.hotels;
   // @ViewChild('itemName')
   ngOnInit(): void {
@@ -40,7 +41,13 @@ export class MenuComponent implements OnInit {
   }
 
   amountCalc(val:any,item:any) {
-    console.log(item);
+    // console.log(item);
+    // console.log(val);
+
+    this.presentItemDetails = item;
+    console.log(this.presentItemDetails);
+    
+    
     this.presentItemName = item.itemName;
       // console.log( presentItemName);
   
@@ -80,6 +87,8 @@ export class MenuComponent implements OnInit {
   confirmation(val:any){
     this.successMsg = "Thanks, your booking is successful";
     // this.display = true;
+    console.log(val);
+    
 
     this.display1 = true;
     this.display2 = true;
@@ -113,7 +122,7 @@ export class MenuComponent implements OnInit {
       break;
     }
 
-    let database:any[] = [val.RestaurantName, val.items[0],this.finalAmount,]
+    let database:any[] = [val.RestaurantName, this.presentItemDetails,this.finalAmount,]
     // console.log(val); 
     this.http.post('https://food-3642d-default-rtdb.firebaseio.com/orders.json',database).subscribe({
       next:()=>{
@@ -124,7 +133,10 @@ export class MenuComponent implements OnInit {
         alert('erorr');
       }
     })
-    
+    setTimeout(() => {
+          window.location.reload() ; 
+      }, 3000);
+
 
 
   }
@@ -162,5 +174,10 @@ export class MenuComponent implements OnInit {
       break;
     }
 
+    // reLoad(){
+    //   this.rtr.navigate([this.rtr.url])
+    // }
+
+    window.location.reload()  
   }
 }

@@ -8,12 +8,23 @@
 .view{
     padding: 60px ;
 }
-.immg{
+
+#hotelImg  {
+    height: 100%;
+}
+
+/* #hotelCard {
+    width: 980px;
+} */
+/* .immg{
     width:300px;
     float:left;
     height:auto !important;
     padding:  50px 50px 
 }
+.hotelDetails {
+    float: right;
+} */
 .t{
     float:right;
     position: right;

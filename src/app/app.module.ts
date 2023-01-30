@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
 
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    NavbarComponent
+    NavbarComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

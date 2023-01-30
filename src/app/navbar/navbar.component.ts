@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   ordernow(){
-    this.rtr.navigate(["menu"])
+    this.rtr.navigate(["orderDetails"])
   }
   logout(){
     this.rtr.navigate(["logout"])
