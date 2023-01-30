@@ -1,0 +1,31 @@
+.img{
+    float :right;
+}
+.addbutton{
+    float: right;
+    padding: 0 50px;
+}
+.view{
+    padding: 60px ;
+}
+.immg{
+    width:300px;
+    float:left;
+    height:auto !important;
+    padding:  50px 50px 
+}
+.t{
+    float:right;
+    position: right;
+}
+.top{
+    width:auto    
+}
+
+#quantity {
+    width: 25%;
+}
+
+#msgs {
+    float: left;
+}

@@ -1,0 +1,202 @@
+<app-navbar></app-navbar>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <br>
+  <div class="top" >
+      <div class="container bg-dark">
+        <div class="row">        
+            <div class="immg">
+                <img src="./assets/grand.webp" style="width : 20rem;"/>
+                <!-- <div class=" text-light" style="float: ;">
+                  <p>Some text heree</p>
+                        
+                  <p>Some text here </p>
+              </div>
+            </div>
+            <div class="col" style="float: left;"> -->
+              
+          </div>
+           
+      </div>
+      
+  </div>
+  </div> 
+
+
+  <div class="view">
+  <div class="row">
+    <div class="container backgrnd my-3">
+      <div class="col-4">
+        <div class="card my-3" style="width: 67rem;" >
+                  <div class="card-header bg-dark text-light">
+                    
+                    <p><b>{{hotels[0].items[0].itemName}}</b></p>
+                  </div>
+                  <div class="card-body">
+                    <div class="img">
+                    <img src="./assets/cs.webp" alt="logo" style="width: 10rem;">
+                  </div>
+                    <p>{{hotels[0].items[0].itemtype}}</p>
+                    <p>Price : <b>₹{{hotels[0].items[0].price}}</b></p>
+                    <!-- ********* extra code ************ -->
+
+                    <p>Quantity</p>
+                        <select class="form-select" aria-label="Default select example" id="quantity"
+                                 #quantityVal1>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                  </div>
+                  
+                    <div class="card-footer"  >
+                      <div class="addbutton">
+                        <button class="btn btn-success"  routerLink="menu" (click)="amountCalc(quantityVal1.value,hotels[0].items[0])" *ngIf= " display1; else btns1 ">ADD</button>
+                      </div>
+                      <ng-template #btns1>
+                        <div id="msgs">
+                          <p class="text-primary">{{priceMsg}}</p>   
+                          <button class="btn btn-primary" (click)="confirmation(hotels[0])">Confirm</button> &nbsp;                 
+                          <button class="btn btn-danger" (click)="decline()">Cancel</button>
+                          </div>
+                      </ng-template>
+                        
+                          <div>
+                          <p class="text-success" *ngIf="msgCond1">{{successMsg}}</p>
+                          <p class="text-danger" *ngIf="!msgCond1">{{declineMsg}}</p>
+                        </div><br>
+                        
+            </div>
+            </div>
+                
+                </div>
+                <div class="row">
+                <div class="container backgrnd my-3">
+                  <div class="col-4">
+                    <div class="card my-3" style="width: 67rem;">
+                      <div class="card-header bg-dark text-light">
+                        
+                        <p><b>{{hotels[0].items[1].itemName}}</b></p>
+                      </div>
+                      <div class="card-body">
+                        <div class="img">
+                        <img src="./assets/cb.webp" alt="logo" style="width: 10rem;">
+                      </div>
+                        <p>{{hotels[0].items[1].itemtype}}</p>
+                        <p>Price : <b>₹{{hotels[0].items[1].price}}</b></p>
+                        <p>Quantity</p>
+                        <select class="form-select" aria-label="Default select example" id="quantity"
+                                 #quantityVal2>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                      </div>
+                      
+                        <div class="card-footer"  >
+                          <div class="addbutton">
+                            <button class="btn btn-success"  routerLink="menu" (click)="amountCalc(quantityVal2.value,hotels[0].items[1])" *ngIf= " display2; else btns2 ">ADD</button>
+                          </div>
+                          <ng-template #btns2>
+                            <div id="msgs">
+                              <p class="text-primary">{{priceMsg}}</p>   
+                              <button class="btn btn-primary" (click)="confirmation(hotels[0])">Confirm</button> &nbsp;                 
+                              <button class="btn btn-danger" (click)="decline()">Cancel</button>
+                              </div>
+                          </ng-template>
+                            
+                              <div>
+                              <p class="text-success" *ngIf="msgCond2">{{successMsg}}</p>
+                              <p class="text-danger" *ngIf="!msgCond2">{{declineMsg}}</p>
+                            </div><br>
+                        </div>
+                        </div>
+                        <div class="row">
+                          <div class="container backgrnd my-3">
+                            <div class="col-4">
+                              <div class="card my-3" style="width: 67rem;">
+                                <div class="card-header bg-dark text-light">
+                                  
+                                  <p><b>{{hotels[0].items[2].itemName}}</b></p>
+                                </div>
+                                <div class="card-body">
+                                  <div class="img">
+                                  <img src="./assets/mb.webp" alt="logo" style="width: 10rem;">
+                                </div>
+                                  <p>{{hotels[0].items[2].itemtype}}</p>
+                                  <p>Price : <b>₹{{hotels[0].items[2].price}}</b></p>
+                                  <p>Quantity</p>
+                                    <select class="form-select" aria-label="Default select example" id="quantity"
+                                 #quantityVal3>
+                                      <option value="1" selected>1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                    </select>
+                                </div>
+                                
+                                  <div class="card-footer"  >
+                                    <div class="addbutton">
+                                      <button class="btn btn-success"  routerLink="menu" (click)="amountCalc(quantityVal3.value,hotels[0].items[2])" *ngIf= " display3; else btns3 ">ADD</button>
+                                    </div>
+                                    <ng-template #btns3>
+                                      <div id="msgs">
+                                        <p class="text-primary">{{priceMsg}}</p>   
+                                        <button class="btn btn-primary" (click)="confirmation(hotels[0])">Confirm</button> &nbsp;                 
+                                        <button class="btn btn-danger" (click)="decline()">Cancel</button>
+                                        </div>
+                                    </ng-template>
+                                      
+                                        <div>
+                                        <p class="text-success" *ngIf="msgCond3">{{successMsg}}</p>
+                                        <p class="text-danger" *ngIf="!msgCond3">{{declineMsg}}</p>
+                                      </div><br>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                      <div class="container backgrnd my-3">
+                                        <div class="col-4">
+                                          <div class="card my-3" style="width: 67rem;">
+                                            <div class="card-header bg-dark text-light">
+                                              
+                                              <p><b>Mutton Double Gosht Biryani</b></p>
+                                            </div>
+                                            <div class="card-body">
+                                              <div class="img">
+                                              <img src="./assets/mdgb.webp" alt="logo" style="width: 10rem;">
+                                            </div>
+                                              <p>Non-veg</p>
+                                              <p>Price : <b>₹679.00</b></p>
+                                              <p>Quantity</p>
+                                                  <select class="form-select" aria-label="Default select example" id="quantity"
+                                                          #quantityVal4>
+                                                      <option value="1" selected>1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                    </select>
+                                            </div>
+                                            
+                                              <div class="card-footer"  >
+                                                <div class="addbutton">
+                                                  <button class="btn btn-success"  routerLink="menu" (click)="amountCalc(quantityVal4.value,679)" *ngIf= " display1; else btns4 ">ADD</button>
+                                                </div>
+                                                <ng-template #btns4>
+                                                  <div id="msgs">
+                                                    <p class="text-primary">{{priceMsg}}</p>   
+                                                    <button class="btn btn-primary" (click)="confirmation(hotels[0])">Confirm</button> &nbsp;                 
+                                                    <button class="btn btn-danger" (click)="decline()">Cancel</button>
+                                                    </div>
+                                                </ng-template>
+                                                  
+                                                    <div>
+                                                    <!-- <p class="text-success" *ngIf="msgCond">{{successMsg}}</p>
+                                                    <p class="text-danger" *ngIf="!msgCond">{{declineMsg}}</p> -->
+                                                  </div><br>
+                                                </div>
+                                                </div>
+                                                
+
+                          
+              </div>
+            

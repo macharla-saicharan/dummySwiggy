@@ -1,0 +1,38 @@
+<!-- <div class="container my-3"> -->
+  
+    <div class="bg">
+     <div layout-gt-sm="column" style="min-width: 350px; max-width: 450px; margin:auto"></div>
+  
+    <div class="card w-75 border-dark">
+     
+      <!-- <div class="card-body" style="background-color:rgb(240, 250, 230)">  -->
+        
+       
+        <div class="outerContainer" >
+          <div class="txt-light">
+            <h1 align="center">Welcome to Swiggy ...!</h1>
+          </div>
+            <form  [formGroup]="loginform" (ngSubmit)="Checkuser()" action="" method="post"  style="background-color: #100f0f;">
+              <div class="txt"  >
+              <h2> Get Started</h2>
+            </div>  
+                <div class="container" >
+                    <input type="text" id="name" name="uname" placeholder="User Name" required maxlength="20" >
+                    
+                    <input type="password"  id="pwd"  placeholder="Password" name="pwd" required maxlength="8">
+                 
+                    <button type="'submit" id="login-btn"  class="btn btn-primary">Login</button>
+                    <label for="remember"><input type="checkbox" checked="checked">Remember me</label>
+                    <a href="#" id="forgot-pwd">Forgotten Password?</a>
+                </div>
+                <div class="buttomContainer">
+                    <button type="button" id="create-btn">Create New Account</button>
+                </div>
+        
+            </form>
+        </div>
+      </div>
+        <br>
+<!-- <div class="bg">
+  <img [src]="myimage" alt="">
+</div> -->
